@@ -53,6 +53,9 @@ body a{
 .white-text{
 	color: #F0F0F0;
 }
+.grey-text{
+	color: #CCCCCC;
+}	
 .top-nav ul li a {
 	color: #7f7f7f;
 	font-size: 17px;
