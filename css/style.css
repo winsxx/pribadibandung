@@ -39,6 +39,20 @@ body a{
 	font-size: 30px;
 	color: #EBB30A;
 }
+.content-space{
+	background-color: #B21522;
+	width: 100%;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.orange-text{
+	color: #EBB30A;
+}
+.white-text{
+	color: #F0F0F0;
+}
 .top-nav ul li a {
 	color: #7f7f7f;
 	font-size: 17px;
