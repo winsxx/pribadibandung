@@ -23,15 +23,20 @@ body a{
 /*--start-header--*/
 .logo {
 	float: left;
-	width:50%;
+	width:80%;
 }
 .logo320{
 	display:none;
 }
 .logo-title{
 	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: bold;
+	color: #B21522;
+}
+.logo-subtitle{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 30px;
 	color: #EBB30A;
 }
 .top-nav ul li a {
@@ -95,7 +100,7 @@ body a{
 }
 .quote{
 	float:right;
-	width:50%;
+	width:20%;
 	margin-left: 0em;
 	text-align: right;
 }
