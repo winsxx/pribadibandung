@@ -521,6 +521,21 @@ ul.callbacks_tabs.callbacks2_tabs {
 	-ms-transition: 0.5s all;
 }
 /*--end-build--*/
+.register-title-bg{
+	width:100%;
+	margin-top: 100px;
+	background-color: #B21522;
+}
+
+.register-title{
+	font-size: 35px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	text-align: center;
+	padding: 20px;
+	background-color: #B21522;
+	color: #ffffff;
+}
+
 /*--start-design--*/
 .design{
 	padding:6em 0px;
@@ -803,7 +818,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 /*--end-news--*/
 /*--start-touch--*/
 .touch{
-	background:#141414;
+	background:#B21522;
 	padding:5em 0px;
 }
 .touch-right{
@@ -900,7 +915,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 /*--end-touch--*/
 /*--start-footer--*/
 .footer{
-	background:#000;
+	background:#770E17;
 	padding:3em 0px;
 }
 .footer-text {
