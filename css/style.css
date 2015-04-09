@@ -69,9 +69,9 @@ body a{
 .quote a {
 	font-size: 21px;
 	font-weight: 400;
-	background: #171717;
+	background: #770E17;
 	letter-spacing: 2px;
-	color: #cbb814;
+	color: #fff;
 	padding: 8px 33px;
 	border-radius: 0.3em;
 	-webkit-border-radius: 0.3em;
@@ -82,7 +82,7 @@ body a{
 .quote a:hover{
 	color: #fff;
 	text-decoration:none;
-	background: #e9b10a;
+	background: #B21522;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -476,7 +476,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 /*--end-banner--*/
 /*--start-build--*/
 .build{
-	background:#e9b10a;
+	background:#B21522;
 	padding:1.2em 0px;
 }
 .build-left h1{
