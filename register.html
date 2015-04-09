@@ -1,0 +1,223 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>SMA Pribadi Bandung</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="ALCHEMIST Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!--Start-smoth-scrolling-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>	
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!--end-smoth-scrolling-->
+<!--start-top-nav-script-->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!--End-top-nav-script-->
+<!--light-box-files -->
+		<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
+		<!--light-box-files -->
+		<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('#example1 a').Chocolat();
+		});
+		</script>
+</head>
+<body>
+	<!--start-header-->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html">
+					<img src="images/pribadi_logo.png" alt="">
+					<span class="logo-title">Pribadi BBS Bandung</span> 
+				</a> 
+			</div>
+			<div class="quote">
+				<a href="quote.html">Login</a>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--end-header-->
+	<!--start-banner-->
+	<div class="banner">
+		<div  id="top" class="callbacks_container">
+			 <ul class="rslides" id="slider4">
+			       <li>
+						<div class="banner-1"></div>	
+					</li>
+					<li>
+						<div class="banner-2"></div>	
+					</li>
+					<li>
+						<div class="banner-3"></div>	
+					</li>
+			  </ul>
+			</div>
+	 	<div class="clearfix"> </div>
+	</div>
+		<!--End-banner-->
+		<!--Slider-Starts-Here-->
+				<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: false,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!--End-slider-script-->
+	<!--start-build-->
+	<div class="build">
+		<div class="container">
+			<div class="build-mian">
+				<div class="col-md-8 build-left">
+					<h1>PENDIDIKAN<span>MEMBENTUK PRIBADI</span></h1>
+					<p>Mendidik pribadi yang beriman dan bertaqwa, mencintai keluarga, mengasihi sesama, berguna bagi keluarga, bangsa dan negara, peduli pada lingkungan serta berwawasan internasional.</p>
+				</div>
+				<div class="col-md-4 build-right">
+					<a href="#">DAFTAR SEKARANG</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--End-build-->	
+
+	<!--Form Pendaftaran-->	
+		<form class="form-horizontal" method="POST" role="form" action="nth.php">
+			<div class="form-group">
+				<div class="col-lg-offset-4 col-lg-4">
+					<label class="col-lg-offset-1 control-label" style="font-size: 40px;" >Register Here </label>					
+				</div>	
+			</div>	
+
+			<div class="form-group">
+				<div class="col-lg-offset-4 col-lg-4">
+					<label class="col-lg-4 control-label">Nama : </label>
+					<input type="text" name="nama" /> 
+				</div>	
+			</div>	
+			<div class="form-group">
+				<div class="col-lg-offset-4 col-lg-4">
+					<label class="col-lg-4 control-label">Alamat : </label>
+					<input type="text" name="alamat" /> 
+				</div>	
+			</div>	
+			<div class="form-group">
+				<div class="col-lg-offset-4 col-lg-4">
+					<label class="col-lg-4 control-label">Email : </label>
+					<input type="text" name="email" />
+				</div>	
+			</div>
+			<div class="form-group">
+				<div class="col-lg-offset-4 col-lg-4">
+					<label class="col-lg-4 control-label">KTP : </label>
+					<input type="text" name="no_ktp" />
+				</div>	
+			</div>	
+			<div class="form-group">
+				<div class="col-lg-offset-4 col-lg-4">
+					<label class="col-lg-4 control-label">Asal SMA/SMP</label>
+					<input type="text" name="asal_sekolah" />
+				</div>	
+			</div>
+			<div class="form-group">
+				<div class="col-lg-offset-4 col-lg-4">
+					<label class="col-lg-4 control-label">No. Hp</label>
+					<input type="text" name="no_hp" />
+				</div>	
+			</div>		     
+		</form>	
+
+	<!--start-touch-->	
+	<div class="touch">
+		<div class="container">
+			<div class="touch-main">
+				<div class="col-md-4 touch-left">
+					<h3>Get in touch</h3>
+					<p>Jl. PHH Mustofa No. 41, Bandung</p>
+					<p>Telp: 022-7211674<p>
+					<p>E-mail:<a href="mailto:example@email.com">info@mypribadi.com</a>
+	   					<span><a href="mailto:example@email.com">bendaharapribadi@gmail.com</a></span></p>
+				</div>
+				<div class="col-md-4 touch-left">
+					<h3>@twitter</h3>
+					<p>@twitterCheck out this great #codecanyon item 'Responsive Login, Sign Up and Payment Form Wizard' codecanyon.net/item/responsiv…</p>
+					<label>about 2days ago</label>
+				</div>
+				<div class="col-md-4 touch-right">
+					<ul>
+						<li><a href="#"><span class="fb"> </span></a></li>
+						<li><a href="#"><span class="twt"> </span></a></li>
+						<li><a href="#"><span class="g"> </span></a></li>
+						<li><a href="#"><span class="p"> </span></a></li>
+						<li><a href="#"><span class="drb"> </span></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--end-touch-->	
+	<!--start-footer-->	
+	<div class="footer">
+		<div class="container">
+			<div class="footer-text">
+				<p>Template By<a href="http://w3layouts.com/"> W3layouts</a></p>
+				<a href="#home" class="scroll"><img src="images/top-img.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<!--End-footer-->			
+</body>
+</html>
