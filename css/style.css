@@ -133,6 +133,7 @@ nav a:hover{
 nav a#pull {
 	display: none;
 }
+
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 768px) {
 	nav { 
