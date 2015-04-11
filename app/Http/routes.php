@@ -15,7 +15,9 @@ Route::get('/', function(){
     return view('pendaftar.index');
 });
 
-Route::get('home', 'HomeController@index');
+Route::get('home', function(){
+    return view('pendaftar.home');
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

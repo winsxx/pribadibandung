@@ -53,7 +53,7 @@
                         keluarga, bangsa dan negara, peduli pada lingkungan serta berwawasan internasional.</p>
                 </div>
                 <div class="col-md-4 build-right">
-                    <a href="#">DAFTAR SEKARANG</a>
+                    <a href="{{ url("auth/register") }}">DAFTAR SEKARANG</a>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -183,25 +183,19 @@
     <div class="touch">
         <div class="container">
             <div class="touch-main">
-                <div class="col-md-4 touch-left">
+                <div class="col-md-8 touch-left">
                     <h3>Get in touch</h3>
                     <p>Jl. PHH Mustofa No. 41, Bandung</p>
-                    <p>Telp: 022-7211674<p>
-                    <p>E-mail:<a href="mailto:example@email.com">info@mypribadi.com</a>
-                        <span><a href="mailto:example@email.com">bendaharapribadi@gmail.com</a></span></p>
-                </div>
-                <div class="col-md-4 touch-left">
-                    <h3>@twitter</h3>
-                    <p>@twitterCheck out this great #codecanyon item 'Responsive Login, Sign Up and Payment Form Wizard' codecanyon.net/item/responsiv…</p>
-                    <label>about 2days ago</label>
+                    <p>Telp: 022-7211674</p>
+                    <p>Fax : 022-7211692</p>
+                    <p>E-mail:<a href="mailto:info@mypribadi.com">info@mypribadi.com</a>
                 </div>
                 <div class="col-md-4 touch-right">
                     <ul>
                         <li><a href="#"><span class="fb"> </span></a></li>
-                        <li><a href="#"><span class="twt"> </span></a></li>
+                        <li><a href="https://twitter.com/pribadibandung"><span class="twt"> </span></a></li>
                         <li><a href="#"><span class="g"> </span></a></li>
                         <li><a href="#"><span class="p"> </span></a></li>
-                        <li><a href="#"><span class="drb"> </span></a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>

@@ -18,14 +18,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         function hideURLbar() {
             window.scrollTo(0, 1);
         } </script>
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
-    <link href="css/style.css" rel='stylesheet' type='text/css'/>
-    <script src="js/jquery-1.11.0.min.js"></script>
+    <link href="/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <link href="/css/style.css" rel='stylesheet' type='text/css'/>
+    <script src="/js/jquery-1.11.0.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
           rel='stylesheet' type='text/css'>
     <!--Start-smoth-scrolling-->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="/js/move-top.js"></script>
+    <script type="text/javascript" src="/js/easing.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -55,8 +55,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <!--End-top-nav-script-->
     <!--light-box-files -->
-    <script src="js/jquery.chocolat.js"></script>
-    <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8"/>
+    <script src="/js/jquery.chocolat.js"></script>
+    <link rel="stylesheet" href="/css/chocolat.css" type="text/css" media="screen" charset="utf-8"/>
     <!--light-box-files -->
     <script type="text/javascript" charset="utf-8">
         $(function () {
@@ -69,14 +69,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header" id="home">
     <div class="container">
         <div class="logo">
-            <a href="index.html">
-                <img src="images/pribadi_logo.png" alt="">
+            <a href="{{ url("/") }}">
+                <img src="/images/pribadi_logo.png" alt="">
                 <span class="logo-title">Pribadi BBS Bandung</span>
                 <span class="logo-subtitle">Pendaftaran</span>
             </a>
         </div>
         <div class="quote">
-            <a href="quote.html">Login</a>
+            <a href=" {{ url("auth/login") }} ">Login</a>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="footer-text">
             <p>Copyright © 2015 Pribadi Bilingual Boarding School - Bandung</p>
             <p>Template By<a href="http://w3layouts.com/"> W3layouts</a></p>
-            <a href="#home" class="scroll"><img src="images/top-img.png" alt=""></a>
+            <a href="#home" class="scroll"><img src="/images/top-img.png" alt=""></a>
         </div>
     </div>
 </div>
