@@ -19,6 +19,10 @@ Route::get('home', function(){
     return view('pendaftar.home');
 });
 
+Route::get('admin', function(){
+   return view('pengurus.admin');
+});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

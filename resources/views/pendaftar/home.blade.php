@@ -1,7 +1,19 @@
 @extends('master')
 
 @section('content')
+
+    <nav class="navbar navbar-default top-nav">
+        <div class="container">
+            <ul class="top-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">Ubah Data Diri</a></li>
+            </ul>
+            <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+        </div>
+    </nav>
+
     <div class="container content-space grey-text">
+
         <div class="row">
             <div class="col-md-4">
                 <img src="images/team-1.jpg" alt="Smiley face" height="240" width="180">
