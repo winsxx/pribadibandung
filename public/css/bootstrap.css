@@ -1766,7 +1766,7 @@ table {
 }
 
 th {
-    text-align: left;
+    text-align: match-parent;
 }
 
 .table {
@@ -2503,9 +2503,9 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
+    color: #ffffff;
+    background-color: #770E17;
+    border-color: #EBB30A;
 }
 
 .btn-default:hover,
@@ -2513,9 +2513,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-    color: #333;
-    background-color: #ebebeb;
-    border-color: #adadad;
+    color: #ffffff;
+    background-color: #B21522;
+    border-color: #EBB30A;
 }
 
 .btn-default:active,

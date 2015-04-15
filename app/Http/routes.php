@@ -23,6 +23,14 @@ Route::get('admin', function(){
    return view('pengurus.admin');
 });
 
+Route::get('humas', function(){
+    return view('pengurus.humas');
+});
+
+Route::get('bendahara', function(){
+    return view('pengurus.bendahara');
+});
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

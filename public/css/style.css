@@ -2752,3 +2752,9 @@ nav a#pull {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.table-header{
+    color: #ffffff;
+    background-color: #B21522;
+    text-align: center;
+}
