@@ -35,6 +35,8 @@ Route::get('bendahara', function(){
     return view('pengurus.bendahara');
 });
 
+Route::get('hasilform','DataDiriController@store');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

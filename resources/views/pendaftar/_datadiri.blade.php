@@ -1,4 +1,22 @@
-<form class="form-horizontal">
+<!-- {!! Form::open(['url' => 'hasilform']) !!}
+    <div class="form-group">
+        {!! Form::label('title','Title:') !!}
+        {!! Form::text('title', null, ['class' => 'form-control', 'foo' => 'bar']) !!}
+    </div>
+
+
+    <div class="form-group">
+        {!! Form::label('body','Body:') !!}
+        {!! Form::textarea('body', null, ['class' => 'form-control', 'foo' => 'bar']) !!}
+    </div>
+
+    <div class="form-group" >
+        {!! Form::submit('Add Article', ['class' => 'btn btn-primary form-control']) !!}
+    </div>
+    
+{!! Form::close() !!}   -->
+
+<form class="form-horizontal"> 
     <div class="col-sm-offset-2 col-sm-8">
         <h1 class="text-center add-margin-top-bottom">Data Diri</h1>
     </div>
