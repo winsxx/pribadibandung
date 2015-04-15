@@ -19,6 +19,10 @@ Route::get('home', function(){
     return view('pendaftar.home');
 });
 
+Route::get('ubahdatadiri', function(){
+    return view('pendaftar.ubahdatadiri');
+});
+
 Route::get('admin', function(){
    return view('pengurus.admin');
 });

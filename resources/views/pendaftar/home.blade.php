@@ -5,8 +5,8 @@
     <nav class="navbar navbar-default top-nav">
         <div class="container">
             <ul class="top-nav">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">Ubah Data Diri</a></li>
+                <li><a href="/home" class="active">Home</a></li>
+                <li><a href="/ubahdatadiri">Ubah Data Diri</a></li>
             </ul>
             <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
         </div>
@@ -36,6 +36,8 @@
             </div>
         </div>
     </div>
-
     @include('pendaftar._datadiri')
+    @include('pendaftar._unggahbuktibayar')
+    @include('pendaftar._jadwaltes')
+    @include('pendaftar._pengumumanlulus')
 @endsection
