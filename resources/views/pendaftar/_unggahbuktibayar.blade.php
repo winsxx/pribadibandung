@@ -1,4 +1,7 @@
 <div class="container">
+    @if(\App\CalonSiswa::find(Auth::user()->id)->link_bukti != null)
+        <img src="/file/{{\App\CalonSiswa::find(Auth::user()->id)->link_bukti}}">
+    @endif
     <div class="add-margin-top-bottom">
         <h1>Unggah Bukti Pembayaran</h1>
         <form action="/buktibayar" method="post" enctype="multipart/form-data">

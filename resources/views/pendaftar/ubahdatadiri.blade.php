@@ -19,7 +19,7 @@
             <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
         </div>
     </nav>
-    <form class="form-horizontal" action="http://localhost:8000/gantidata" method="POST"> 
+    <form class="form-horizontal" action="/gantidata" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="col-sm-offset-2 col-sm-8">
             <h1 class="text-center add-margin-top-bottom">Data Diri</h1>

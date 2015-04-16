@@ -22,6 +22,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'SiswaController@getHome');
 
 Route::get('admin', 'AdminController@getHome');
+Route::get('admin-umumkan', 'AdminController@getMenuUmumkan');
 
 Route::get('humas', 'HumasController@getHome');
 
@@ -36,8 +37,12 @@ Route::post('buktibayar','SiswaController@postBuktiBayar');
 Route::get('sahkan/{id}', 'BendaharaController@getSahkan');
 
 Route::get('luluskan/{id}', 'HumasController@getLuluskan');
+Route::get('gagalkan/{id}', 'HumasController@getGagalkan');
 
 Route::get('detailsiswa/{id}', 'SiswaController@showDetail');
+
+Route::post('ubahjadwal', 'AdminController@postGantiJadwal');
+Route::get('mengumumkan', 'AdminController@umumkan');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

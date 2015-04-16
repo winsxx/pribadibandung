@@ -42,9 +42,7 @@ class SiswaController extends Controller {
 		$calonsiswa->gender=$input['gender'];
 		$calonsiswa->no_hp=$input['phoneNumber'];
 		$calonsiswa->asal_sekolah=$input['school_before'];
-		if ($calonsiswa->phase==1){
-			$calonsiswa->phase=2;
-		}
+
 		$calonsiswa->save();			
 
 		return redirect('/home');
@@ -61,9 +59,8 @@ class SiswaController extends Controller {
 		$calonsiswa->gender=$input['gender'];
 		$calonsiswa->no_hp=$input['phoneNumber'];
 		$calonsiswa->asal_sekolah=$input['school_before'];
-		if ($calonsiswa->phase==1){
-			$calonsiswa->phase=2;
-		}
+		$calonsiswa->phase=2;
+
 		$calonsiswa->save();
 
 		return redirect('/home');

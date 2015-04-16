@@ -19,32 +19,40 @@
             </div>
             <div class="col-md-4">
                 <h3 class="orange-text">No Registrasi:</h3>
-                <h3> &nbsp;&nbsp;2015001</h3>
+                <h3> &nbsp;&nbsp;{{Auth::user()->id}}</h3>
                 <br>
                 <h3 class="orange-text">Status:</h3>
-                <h3> &nbsp;&nbsp;Belum Lolos</h3>
+                @if(Auth::user()->siswa != null && Auth::user()->siswa->phase==4 && Auth::user()->siswa->status_kelulusan != 0)
+                    @if(Auth::user()->siswa->status_kelulusan == 1)
+                        <h3> &nbsp;&nbsp;Lolos</h3>
+                    @elseif (Auth::user()->siswa->status_kelulusan == 2)
+                        <h3> &nbsp;&nbsp;Gagal</h3>
+                    @endif
+                @else
+                    <h3> &nbsp;&nbsp;Belum Lolos</h3>
+                @endif
             </div>
             <div class="col-xs-4">
                 <h2 class="orange-text">Tahapan Proses:</h2>                                              
                     @if ($dataSiswa->phase==2)
                         <ol>
-                            <h3><li>Input data diri dan dokumen</li></h3>
+                            <h3><li><strike>Input data diri dan dokumen</strike></li></h3>
                             <h3><li class="white-text">Unggah bukti pembayaran</li></h3>
                             <h3><li>Mengikuti ujian masuk</li></h3>
                             <h3><li>Pengumuman kelulusan</li></h3>
                         </ol>
                     @elseif ($dataSiswa->phase==3)
                         <ol>
-                            <h3><li>Input data diri dan dokumen</li></h3>
-                            <h3><li>Unggah bukti pembayaran</li></h3>
+                            <h3><li><strike>Input data diri dan dokumen</strike></li></h3>
+                            <h3><li><strike>Unggah bukti pembayaran</strike></li></h3>
                             <h3><li class="white-text">Mengikuti ujian masuk</li></h3>
                             <h3><li>Pengumuman kelulusan</li></h3>
                         </ol>
                     @elseif ($dataSiswa->phase==4)
                         <ol>
-                            <h3><li>Input data diri dan dokumen</li></h3>
-                            <h3><li>Unggah bukti pembayaran</li></h3>
-                            <h3><li>Mengikuti ujian masuk</li></h3>
+                            <h3><li><strike>Input data diri dan dokumen</strike></li></h3>
+                            <h3><li><strike>Unggah bukti pembayaran</strike></li></h3>
+                            <h3><li><strike>Mengikuti ujian masuk</strike></li></h3>
                             <h3><li class="white-text">Pengumuman kelulusan</li></h3>
                         </ol>
                     @else

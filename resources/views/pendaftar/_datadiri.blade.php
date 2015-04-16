@@ -6,7 +6,7 @@
     </ul>
 @endif
 
-<form class="form-horizontal" action="http://localhost:8000/hasilform" method="POST"> 
+<form class="form-horizontal" action="/hasilform" method="POST">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="col-sm-offset-2 col-sm-8">
         <h1 class="text-center add-margin-top-bottom">Data Diri</h1>
@@ -29,7 +29,7 @@
         <label for="dateofbirth" class="col-sm-3 control-label">Tanggal Lahir</label>
 
         <div class="col-sm-6">
-            <input class="form-control" name="dateofbirth" id="dateofbirth" placeholder="Tanggal Lahir">
+            <input class="form-control" name="dateofbirth" id="dateofbirth" placeholder="YYYY/MM/DD">
         </div>
     </div>
 

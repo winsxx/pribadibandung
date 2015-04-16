@@ -26,4 +26,11 @@ class HumasController extends Controller {
         return Redirect::to('humas');
     }
 
+    public function getGagalkan($id){
+        $cs = CalonSiswa::find($id);
+        $cs->status_kelulusan=2;
+        $cs->save();
+        return Redirect::to('humas');
+    }
+
 }
