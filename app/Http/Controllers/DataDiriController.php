@@ -4,6 +4,7 @@ use App\CalonSiswa;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DataDiriRequest;
+use Illuminate\Support\Facades\Auth;
 
 class DataDiriController extends Controller {
 
@@ -12,6 +13,7 @@ class DataDiriController extends Controller {
 		$input=$request->all();				
 
 		$calonsiswa=new CalonSiswa();
+		//$calonsiswa->id = Auth::user()->id;
 		$calonsiswa->nama=$input['name'];
 		$calonsiswa->alamat=$input['address'];
 		$calonsiswa->tmpt_lahir=$input['dateofbirth'];

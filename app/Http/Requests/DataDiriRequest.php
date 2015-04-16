@@ -22,14 +22,6 @@ class DataDiriRequest extends Request {
 	public function rules()
 	{
 		return [
-			/*$calonsiswa->nama=$input['name'];
-			$calonsiswa->alamat=$input['address'];
-			$calonsiswa->tmpt_lahir=$input['dateofbirth'];
-			$calonsiswa->tgl_lahir=$input['placeofbirth'];
-			$calonsiswa->gender=$input['gender'];
-			$calonsiswa->no_hp=$input['phoneNumber'];
-			$calonsiswa->asal_sekolah=$input['school_before'];*/
-
 			'name' => 'required',
 			'address' => 'required',
 			'dateofbirth' => 'required',
