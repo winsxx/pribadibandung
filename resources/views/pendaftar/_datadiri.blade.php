@@ -1,22 +1,4 @@
-<!-- {!! Form::open(['url' => 'hasilform']) !!}
-    <div class="form-group">
-        {!! Form::label('title','Title:') !!}
-        {!! Form::text('title', null, ['class' => 'form-control', 'foo' => 'bar']) !!}
-    </div>
-
-
-    <div class="form-group">
-        {!! Form::label('body','Body:') !!}
-        {!! Form::textarea('body', null, ['class' => 'form-control', 'foo' => 'bar']) !!}
-    </div>
-
-    <div class="form-group" >
-        {!! Form::submit('Add Article', ['class' => 'btn btn-primary form-control']) !!}
-    </div>
-    
-{!! Form::close() !!}   -->
-
-<form class="form-horizontal"> 
+<form class="form-horizontal" action="http://localhost:8000/hasilform" method="POST"> 
     <div class="col-sm-offset-2 col-sm-8">
         <h1 class="text-center add-margin-top-bottom">Data Diri</h1>
     </div>
@@ -57,12 +39,6 @@
                     Perempuan
                 </label>
             </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="phoneNumberHome" class="col-sm-3 control-label">Nomor Telepon</label>
-        <div class="col-sm-6">
-            <input class="form-control" id="phoneNumberHome" placeholder="061xxxxx">
         </div>
     </div>
     <div class="form-group">
