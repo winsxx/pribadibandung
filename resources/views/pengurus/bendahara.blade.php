@@ -12,27 +12,15 @@
                     <th>Bukti Bayar</th>
                     <th>Konfirmasi Pembayaran</th>
                 </tr>
+                @foreach($cs as $c)
                 <tr>
-                    <td>06-07-2015 16:00</td>
-                    <td>2015001</td>
-                    <td>Budi Gunawan</td>
-                    <td><a href="">Lihat</a></td>
-                    <td><a href="">Sahkan Pembayaran</a></td>
+                    <td>{{$c->updated_at}}</td>
+                    <td>{{$c->id}}</td>
+                    <td>{{$c->name}}</td>
+                    <td><a href="/file/{{$c->link_bukti}}">Lihat</a></td>
+                    <td><a href="/sahkan/{{$c->id}}">Sahkan Pembayaran</a></td>
                 </tr>
-                <tr>
-                    <td>06-07-2015 16:00</td>
-                    <td>2015002</td>
-                    <td>Charlie</td>
-                    <td><a href="">Lihat</a></td>
-                    <td><a href="">Sahkan Pembayaran</a></td>
-                </tr>
-                <tr>
-                    <td>06-07-2015 16:00</td>
-                    <td>2015003</td>
-                    <td>Rama Aji</td>
-                    <td><a href="">Lihat</a></td>
-                    <td><a href="">Sahkan Pembayaran</a></td>
-                </tr>
+                @endforeach
             </table>
         </div>
     </div>
