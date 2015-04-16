@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function(){
-    return view('pendaftar.index');
-});
-
 Route::get('home', function(){
     return view('pendaftar.home');
 });
@@ -23,17 +19,15 @@ Route::get('ubahdatadiri', function(){
     return view('pendaftar.ubahdatadiri');
 });
 
-Route::get('admin', function(){
-   return view('pengurus.admin');
-});
+Route::get('/', 'WelcomeController@index');
 
-Route::get('humas', function(){
-    return view('pengurus.humas');
-});
+Route::get('home', 'SiswaController@getHome');
 
-Route::get('bendahara', function(){
-    return view('pengurus.bendahara');
-});
+Route::get('admin', 'AdminController@getHome');
+
+Route::get('humas', 'HumasController@getHome');
+
+Route::get('bendahara', 'BendaharaController@getHome');
 
 Route::post('hasilform','DataDiriController@store');
 

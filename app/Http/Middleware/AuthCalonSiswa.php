@@ -3,7 +3,8 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class AuthAdmin {
+class AuthCalonSiswa {
+
     protected $auth;
 
     public function __construct(Guard $auth)
@@ -24,11 +25,11 @@ class AuthAdmin {
             return redirect(url('/auth/login'));
         }
 
-        if (! ($this->auth->user()->role == 'admin') ){
+        if (! ($this->auth->user()->role == 'calonsiswa') ){
             return redirect(url('/'));
         }
 
-		return $next($request);
+        return $next($request);
 	}
 
 }
