@@ -10,7 +10,6 @@
         </ul>
     @endif
 @endsection
-
     <nav class="navbar navbar-default top-nav">
         <div class="container">
             <ul class="top-nav">
@@ -29,21 +28,21 @@
             <label for="dateofbirth" class="col-sm-3 control-label">Alamat Sekarang</label>
 
             <div class="col-sm-6">
-                <input class="form-control" name="address" id="address" value={{ $dataSiswa->alamat }}>
+                <input class="form-control" name="address" id="address" value='{{ $dataSiswa->alamat }}'>
             </div>
         </div>
         <div class="form-group">
             <label for="placeofbirth" class="col-sm-3 control-label">Tempat Lahir</label>
 
             <div class="col-sm-6">
-                <input class="form-control" name="placeofbirth" id="placeofbirth" value={{ $dataSiswa->tmpt_lahir }}>
+                <input class="form-control" name="placeofbirth" id="placeofbirth" value='{{ $dataSiswa->tmpt_lahir }}'>
             </div>
         </div>
         <div class="form-group">
             <label for="dateofbirth" class="col-sm-3 control-label">Tanggal Lahir</label>
 
             <div class="col-sm-6">
-                <input class="form-control" name="dateofbirth" id="dateofbirth" value={{ $dataSiswa->tgl_lahir }}>
+                <input class="form-control" name="dateofbirth" id="dateofbirth" value='{{ $dataSiswa->tgl_lahir }}'>
             </div>
         </div>
 
@@ -75,7 +74,7 @@
         <div class="form-group">
             <label for="phoneNumber" class="col-sm-3 control-label">Asal Sekolah</label>
             <div class="col-sm-6">
-                <input class="form-control" name="school_before" id="school_before" value={{ $dataSiswa->asal_sekolah }}>
+                <input class="form-control" name="school_before" id="school_before" value='{{ $dataSiswa->asal_sekolah }}'>
             </div>
         </div>
         <div class="form-group">

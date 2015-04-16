@@ -20,6 +20,7 @@ class SiswaController extends Controller {
     public function ubah(){
     	$dataSiswa=CalonSiswa::find(Auth::user()->id);
     	return view('pendaftar.ubahdatadiri',compact('dataSiswa'));
+    	//return View::with('pendaftar.ubahdatadiri').withvar($dataSiswa);
     }
 
     public function store(DataDiriRequest $request){
