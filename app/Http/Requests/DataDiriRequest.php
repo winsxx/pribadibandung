@@ -21,8 +21,7 @@ class DataDiriRequest extends Request {
 	 */
 	public function rules()
 	{
-		return [
-			'name' => 'required',
+		return [			
 			'address' => 'required',
 			'dateofbirth' => 'required',
 			'placeofbirth' => 'required',			

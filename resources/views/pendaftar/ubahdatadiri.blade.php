@@ -1,6 +1,16 @@
 @extends('master')
 
 @section('content')
+
+@if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+@endsection
+
     <nav class="navbar navbar-default top-nav">
         <div class="container">
             <ul class="top-nav">
@@ -16,31 +26,24 @@
             <h1 class="text-center add-margin-top-bottom">Data Diri</h1>
         </div>
         <div class="form-group">
-            <label for="name" class="col-sm-3 control-label">Nama Lengkap</label>
-
-            <div class="col-sm-6">
-                <input class="form-control" name="name" id="name" placeholder="Nama">
-            </div>
-        </div>
-        <div class="form-group">
             <label for="dateofbirth" class="col-sm-3 control-label">Alamat Sekarang</label>
 
             <div class="col-sm-6">
-                <input class="form-control" name="address" id="address" placeholder="Alamat">
+                <input class="form-control" name="address" id="address" value={{ $dataSiswa->alamat }}>
             </div>
         </div>
         <div class="form-group">
             <label for="placeofbirth" class="col-sm-3 control-label">Tempat Lahir</label>
 
             <div class="col-sm-6">
-                <input class="form-control" name="placeofbirth" id="placeofbirth" placeholder="Tempat kelahiran">
+                <input class="form-control" name="placeofbirth" id="placeofbirth" value={{ $dataSiswa->tmpt_lahir }}>
             </div>
         </div>
         <div class="form-group">
             <label for="dateofbirth" class="col-sm-3 control-label">Tanggal Lahir</label>
 
             <div class="col-sm-6">
-                <input class="form-control" name="dateofbirth" id="dateofbirth" placeholder="Tanggal Lahir">
+                <input class="form-control" name="dateofbirth" id="dateofbirth" value={{ $dataSiswa->tgl_lahir }}>
             </div>
         </div>
 
@@ -66,13 +69,13 @@
         <div class="form-group">
             <label for="phoneNumber" class="col-sm-3 control-label">Nomor HP</label>
             <div class="col-sm-6">
-                <input class="form-control" name="phoneNumber" id="phoneNumber" placeholder="081xxxxxx">
+                <input class="form-control" name="phoneNumber" id="phoneNumber" value={{ $dataSiswa->no_hp }}>
             </div>
         </div>
         <div class="form-group">
             <label for="phoneNumber" class="col-sm-3 control-label">Asal Sekolah</label>
             <div class="col-sm-6">
-                <input class="form-control" name="school_before" id="school_before" placeholder="Asal Sekolah">
+                <input class="form-control" name="school_before" id="school_before" value={{ $dataSiswa->asal_sekolah }}>
             </div>
         </div>
         <div class="form-group">
@@ -81,12 +84,3 @@
             </div>
         </div>
     </form>
-
-    @if ($errors->any())
-        <ul class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    @endif
-@endsection

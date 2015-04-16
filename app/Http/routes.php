@@ -15,9 +15,7 @@ Route::get('home', function(){
     return view('pendaftar.home');
 });
 
-Route::get('ubahdatadiri', function(){
-    return view('pendaftar.ubahdatadiri');
-});
+Route::get('ubahdatadiri', 'SiswaController@ubah');
 
 Route::get('/', 'WelcomeController@index');
 
@@ -29,7 +27,7 @@ Route::get('humas', 'HumasController@getHome');
 
 Route::get('bendahara', 'BendaharaController@getHome');
 
-Route::post('hasilform','DataDiriController@store');
+Route::post('hasilform','SiswaController@store');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

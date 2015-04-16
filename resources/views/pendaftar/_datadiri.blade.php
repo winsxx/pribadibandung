@@ -1,14 +1,15 @@
+@if ($errors->any())
+    <ul class="alert alert-danger">
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
+
 <form class="form-horizontal" action="http://localhost:8000/hasilform" method="POST"> 
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="col-sm-offset-2 col-sm-8">
         <h1 class="text-center add-margin-top-bottom">Data Diri</h1>
-    </div>
-    <div class="form-group">
-        <label for="name" class="col-sm-3 control-label">Nama Lengkap</label>
-
-        <div class="col-sm-6">
-            <input class="form-control" name="name" id="name" placeholder="Nama">
-        </div>
     </div>
     <div class="form-group">
         <label for="dateofbirth" class="col-sm-3 control-label">Alamat Sekarang</label>
@@ -69,11 +70,3 @@
         </div>
     </div>
 </form>
-
-@if ($errors->any())
-    <ul class="alert alert-danger">
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-@endif
