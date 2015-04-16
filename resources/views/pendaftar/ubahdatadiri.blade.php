@@ -19,7 +19,7 @@
             <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
         </div>
     </nav>
-    <form class="form-horizontal" action="http://localhost:8000/hasilform" method="POST"> 
+    <form class="form-horizontal" action="http://localhost:8000/gantidata" method="POST"> 
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="col-sm-offset-2 col-sm-8">
             <h1 class="text-center add-margin-top-bottom">Data Diri</h1>
@@ -46,24 +46,45 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="gender" class="col-sm-3 control-label">Gender</label>
+        @if ($dataSiswa->gender==0)
+            <div class="form-group">
+                <label for="gender" class="col-sm-3 control-label">Gender</label>
 
-            <div class="col-sm-6">
-                <div class="radio" id="gender">
-                    <label>
-                        <input type="radio" name="gender" id="genderRadios1" value="laki" checked>
-                        Laki-laki
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="gender" id="genderRadios2" value="perempuan">
-                        Perempuan
-                    </label>
+                <div class="col-sm-6">
+                    <div class="radio" id="gender">
+                        <label>
+                            <input type="radio" name="gender" id="genderRadios1" value="0" checked>
+                            Laki-laki
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="gender" id="genderRadios2" value="1">
+                            Perempuan
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
+        @else
+            <div class="form-group">
+                <label for="gender" class="col-sm-3 control-label">Gender</label>
+
+                <div class="col-sm-6">
+                    <div class="radio" id="gender">
+                        <label>
+                            <input type="radio" name="gender" id="genderRadios1" value="0" >
+                            Laki-laki
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="gender" id="genderRadios2" value="1" checked>
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
+            </div>
+        @endif
 
         <div class="form-group">
             <label for="phoneNumber" class="col-sm-3 control-label">Nomor HP</label>

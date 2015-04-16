@@ -39,13 +39,13 @@
         <div class="col-sm-6">
             <div class="radio" id="gender">
                 <label>
-                    <input type="radio" name="gender" id="genderRadios1" value="laki" checked>
+                    <input type="radio" name="gender" id="genderRadios1" value="0" checked>
                     Laki-laki
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" name="gender" id="genderRadios2" value="perempuan">
+                    <input type="radio" name="gender" id="genderRadios2" value="1">
                     Perempuan
                 </label>
             </div>

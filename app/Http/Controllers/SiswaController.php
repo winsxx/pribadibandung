@@ -16,14 +16,39 @@ class SiswaController extends Controller {
     }
 
     public function getHome(){
-        return view('pendaftar.home');
+    	$dataSiswa=CalonSiswa::findOrNew(Auth::user()->id);  
+        return view('pendaftar.home',compact('dataSiswa'));
+        //return view('pendaftar.home');
     }
 
-    public function ubah(){
+    public function ubah(){    	
     	$dataSiswa=CalonSiswa::find(Auth::user()->id);
+    	if ($dataSiswa == null){
+            $dataSiswa = new CalonSiswa();
+            $dataSiswa->id = Auth::user()->id;
+            $dataSiswa->save();
+        }
     	return view('pendaftar.ubahdatadiri',compact('dataSiswa'));
     	//return View::with('pendaftar.ubahdatadiri').withvar($dataSiswa);
     }
+
+    public function ganti(DataDiriRequest $request){
+		$input=$request->all();
+		
+		$calonsiswa = CalonSiswa::find(Auth::user()->id);
+		$calonsiswa->alamat=$input['address'];
+		$calonsiswa->tmpt_lahir=$input['placeofbirth'];
+		$calonsiswa->tgl_lahir=$input['dateofbirth'];
+		$calonsiswa->gender=$input['gender'];
+		$calonsiswa->no_hp=$input['phoneNumber'];
+		$calonsiswa->asal_sekolah=$input['school_before'];
+		if ($calonsiswa->phase==1){
+			$calonsiswa->phase=2;
+		}
+		$calonsiswa->save();			
+
+		return redirect('/home');
+	}
 
     public function store(DataDiriRequest $request){
 		$input=$request->all();
@@ -31,11 +56,14 @@ class SiswaController extends Controller {
 		$calonsiswa=new CalonSiswa();
 		$calonsiswa->id = Auth::user()->id;
 		$calonsiswa->alamat=$input['address'];
-		$calonsiswa->tmpt_lahir=$input['dateofbirth'];
-		$calonsiswa->tgl_lahir=$input['placeofbirth'];
+		$calonsiswa->tmpt_lahir=$input['placeofbirth'];
+		$calonsiswa->tgl_lahir=$input['dateofbirth'];
 		$calonsiswa->gender=$input['gender'];
 		$calonsiswa->no_hp=$input['phoneNumber'];
 		$calonsiswa->asal_sekolah=$input['school_before'];
+		if ($calonsiswa->phase==1){
+			$calonsiswa->phase=2;
+		}
 		$calonsiswa->save();
 
 		return redirect('/home');
@@ -63,6 +91,7 @@ class SiswaController extends Controller {
             $usr->id = Auth::user()->id;
         }
         $usr->link_bukti = $filename;
+        $usr->phase+=1;
         $usr->save();
         return Redirect::to('home');
     }
