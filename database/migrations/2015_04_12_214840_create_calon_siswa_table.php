@@ -20,6 +20,7 @@ class CreateCalonSiswaTable extends Migration {
 			$table->string('tgl_lahir',50);
 			$table->integer('gender');
 			$table->string('no_hp',15);
+            $table->string('link_bukti');
             $table->integer('phase')->default(1);
 			$table->string('asal_sekolah', 30);
 			$table->integer('status_pembayaran');

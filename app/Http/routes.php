@@ -29,6 +29,10 @@ Route::get('bendahara', 'BendaharaController@getHome');
 
 Route::post('hasilform','SiswaController@store');
 
+Route::post('buktibayar','SiswaController@postBuktiBayar');
+
+Route::get('sahkan/{id}', 'BendaharaController@getSahkan');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
