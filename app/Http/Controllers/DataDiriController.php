@@ -3,13 +3,13 @@
 use App\CalonSiswa;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Request;
+use App\Http\Requests\DataDiriRequest;
 
 class DataDiriController extends Controller {
 
 	//
-	public function store(){
-		$input=Request::all();				
+	public function store(DataDiriRequest $request){
+		$input=$request->all();				
 
 		$calonsiswa=new CalonSiswa();
 		$calonsiswa->nama=$input['name'];
