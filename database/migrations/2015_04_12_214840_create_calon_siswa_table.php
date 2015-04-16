@@ -18,7 +18,6 @@ class CreateCalonSiswaTable extends Migration {
 			$table->string('alamat', 50);
 			$table->string('asal_sekolah', 30);
 			$table->string('username', 25)->unique();
-			$table->string('email')->unique();
 			$table->integer('status_pembayaran');
 			$table->integer('status_kelulusan');			
 
