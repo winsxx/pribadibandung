@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use App\CalonSiswa;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\database\2015_04_12_214840_create_calon_siswa_table
 use Request;
 
 class DataDiriController extends Controller {
@@ -10,16 +10,8 @@ class DataDiriController extends Controller {
 	//
 	public function store(){
 		$input=Request::all();				
-		//$input['']=Carbon::now();
-		
-		//$article=new Article;
-		//$article->title=$input['title'];
-		//$article->save();
-		//Article::create($request->all());		
 
-		//return redirect('/create');
-
-		$calonsiswa=new CreateCalonSiswaTable;
+		$calonsiswa=new CalonSiswa();
 		$calonsiswa->nama=$input['name'];
 		$calonsiswa->alamat=$input['address'];
 		$calonsiswa->tmpt_lahir=$input['dateofbirth'];
