@@ -35,7 +35,10 @@ class RedirectIfAuthenticated {
 	{
 		if ($this->auth->check())
 		{
-			return new RedirectResponse(url('/home'));
+			if($this->auth->user()->role == 'calonsiswa') return new RedirectResponse(url('/home'));
+            if($this->auth->user()->role == 'admin') return new RedirectResponse(url('/admin'));
+            if($this->auth->user()->role == 'humas') return new RedirectResponse(url('/humas'));
+            if($this->auth->user()->role == 'bendahara') return new RedirectResponse(url('/bendahara'));
 		}
 
 		return $next($request);

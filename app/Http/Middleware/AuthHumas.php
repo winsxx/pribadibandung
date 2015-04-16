@@ -22,7 +22,7 @@ class AuthHumas {
 	public function handle($request, Closure $next)
 	{
         if(! $this->auth->check()){
-            return redirect(url('/login'));
+            return redirect(url('/auth/login'));
         }
 
         if (! ($this->auth->user()->role == 'humas') ){

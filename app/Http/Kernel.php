@@ -30,6 +30,7 @@ class Kernel extends HttpKernel {
         'admin' => 'App\Http\Middleware\AuthAdmin',
         'bendahara' => 'App\Http\Middleware\AuthBendahara',
         'humas' => 'App\Http\Middleware\AuthHumas',
+        'calonsiswa' => 'App\Http\Middleware\AuthCalonSiswa',
 	];
 
 }
