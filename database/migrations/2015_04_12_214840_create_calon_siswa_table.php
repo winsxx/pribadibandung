@@ -14,6 +14,7 @@ class CreateCalonSiswaTable extends Migration {
 	{
 		Schema::create('calon_siswa', function(Blueprint $table)
 		{
+            $table->integer('id')->references('id')->on('users');
 			$table->string('nama', 20);
 			$table->string('alamat', 50);
 			$table->string('tmpt_lahir',50)	;
