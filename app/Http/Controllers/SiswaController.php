@@ -90,10 +90,14 @@ class SiswaController extends Controller {
             $usr = new CalonSiswa();
             $usr->id = Auth::user()->id;
         }
-        $usr->link_bukti = $filename;
-        $usr->phase+=1;
+        $usr->link_bukti = $filename;        
         $usr->save();
         return Redirect::to('home');
+    }
+
+    public function showDetail($id){
+    	$dataSiswa = CalonSiswa::find($id);
+    	return view('pendaftar.detilsiswa',compact('dataSiswa'));
     }
 
 }

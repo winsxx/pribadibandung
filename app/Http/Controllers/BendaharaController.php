@@ -23,6 +23,7 @@ class BendaharaController extends Controller {
         $cs = CalonSiswa::find($id);
         if($cs->phase == 2)
             $cs->phase = 3;
+        $cs->status_pembayaran=1;
         $cs->save();
         return Redirect::to('bendahara');
     }

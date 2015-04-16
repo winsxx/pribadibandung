@@ -11,42 +11,14 @@
                     <th>Detail</th>
                     <th>Kelulusan</th>
                 </tr>
-                <tr>
-                    <td>2015001</td>
-                    <td>Budi Gunawan</td>
-                    <td><a href="">Lihat</a></td>
-                    <td>
-                        <select class="form-control">
-                            <option>Belum Diumumkan</option>
-                            <option>Gagal</option>
-                            <option>Lulus</option>
-                        </select>
-                    </td>
+                @foreach($cs as $c)
+                <tr>                    
+                    <td>{{$c->id}}</td>
+                    <td>{{$c->name}}</td>
+                    <td><a href="/detailsiswa/{{$c->id}}">Lihat</a></td>
+                    <td><a href="/luluskan/{{$c->id}}">Luluskan</a></td>
                 </tr>
-                <tr>
-                    <td>2015002</td>
-                    <td>Charlie</td>
-                    <td><a href="">Lihat</a></td>
-                    <td>
-                        <select class="form-control">
-                            <option>Belum Diumumkan</option>
-                            <option>Gagal</option>
-                            <option>Lulus</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2015003</td>
-                    <td>Rama Aji</td>
-                    <td><a href="">Lihat</a></td>
-                    <td>
-                        <select class="form-control">
-                            <option>Belum Diumumkan</option>
-                            <option>Gagal</option>
-                            <option>Lulus</option>
-                        </select>
-                    </td>
-                </tr>
+                @endforeach
             </table>
         </div>
     </div>

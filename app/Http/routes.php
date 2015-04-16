@@ -35,6 +35,10 @@ Route::post('buktibayar','SiswaController@postBuktiBayar');
 
 Route::get('sahkan/{id}', 'BendaharaController@getSahkan');
 
+Route::get('luluskan/{id}', 'HumasController@getLuluskan');
+
+Route::get('detailsiswa/{id}', 'SiswaController@showDetail');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
