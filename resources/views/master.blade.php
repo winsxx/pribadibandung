@@ -76,7 +76,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </a>
         </div>
         <div class="quote">
-            <a href=" {{ url("auth/login") }} ">Login</a>
+            @if (Auth::check())
+                <a href=" {{ url("auth/logout") }} ">Logout</a>
+            @else
+                <a href=" {{ url("auth/login") }} ">Login</a>
+            @endif
         </div>
         <div class="clearfix"></div>
     </div>
