@@ -33,7 +33,7 @@
                 @endif
             </div>
             <div class="col-xs-4">
-                <h2 class="orange-text">Tahapan Proses:</h2>                                              
+                <h2 class="orange-text">Tahapan Proses:</h2>                 
                     @if ($dataSiswa->phase==2)
                         <ol>
                             <h3><li><strike>Input data diri dan dokumen</strike></li></h3>
