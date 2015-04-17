@@ -9,7 +9,7 @@
             @endforeach
         </ul>
     @endif
-@endsection
+
     <nav class="navbar navbar-default top-nav">
         <div class="container">
             <ul class="top-nav">
@@ -104,3 +104,4 @@
             </div>
         </div>
     </form>
+@endsection
