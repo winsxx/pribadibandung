@@ -23,7 +23,7 @@ class DataDiriRequest extends Request {
 	{
 		return [			
 			'address' => 'required',
-			'dateofbirth' => 'required',
+			'dateofbirth' => 'required|date_format:"Y/m/d"',
 			'placeofbirth' => 'required',			
 			'phoneNumber' => 'required|min:11',
 			'school_before' => 'required',			
