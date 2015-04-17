@@ -17,7 +17,7 @@
                     <td>{{$c->updated_at}}</td>
                     <td>{{$c->id}}</td>
                     <td>{{$c->name}}</td>
-                    <td><a href="/file/{{$c->link_bukti}}">Lihat</a></td>
+                    <td><a href="/file/{{$c->link_bukti}}" target="_blank">Lihat</a></td>
                     <td><a href="/sahkan/{{$c->id}}">Sahkan Pembayaran</a></td>
                 </tr>
                 @endforeach

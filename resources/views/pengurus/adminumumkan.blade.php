@@ -7,7 +7,7 @@
                 <li><a href="/admin">Mengubah Info Jadwal Ujian Masuk</a></li>
                 <li><a href="/mengumumkan" class="active">Melakukan Pengumuman</a></li>
             </ul>
-            <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+            <a href="#" id="pull"><img src="/images/menu-icon.png" title="menu" /></a>
         </div>
     </nav>
 
