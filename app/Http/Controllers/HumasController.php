@@ -4,6 +4,7 @@ use App\CalonSiswa;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -31,6 +32,12 @@ class HumasController extends Controller {
         $cs->status_kelulusan=2;
         $cs->save();
         return Redirect::to('humas');
+    }
+
+    public function showDetail($id){
+        $dataSiswa = CalonSiswa::find($id);
+        $pengguna = User::find($id);
+        return view('pendaftar.detilsiswa',compact('dataSiswa','pengguna'));
     }
 
 }

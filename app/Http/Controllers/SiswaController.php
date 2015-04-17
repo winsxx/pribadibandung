@@ -3,6 +3,7 @@
 use App\CalonSiswa;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DataDiriRequest;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -42,6 +43,15 @@ class SiswaController extends Controller {
 		$calonsiswa->gender=$input['gender'];
 		$calonsiswa->no_hp=$input['phoneNumber'];
 		$calonsiswa->asal_sekolah=$input['school_before'];
+
+        if($request->hasFile('profpic')){
+            $dokumen = $request->file('profpic');
+            if($dokumen->isValid() && $dokumen->getClientOriginalExtension()=='jpg'){
+                $filename = 'profpic_'.Auth::user()->id.'.jpg';
+                $calonsiswa->link_profpic = $filename;
+                $dokumen->move('file', $filename);
+            }
+        }
 
 		$calonsiswa->save();			
 
@@ -92,9 +102,6 @@ class SiswaController extends Controller {
         return Redirect::to('home');
     }
 
-    public function showDetail($id){
-    	$dataSiswa = CalonSiswa::find($id);
-    	return view('pendaftar.detilsiswa',compact('dataSiswa'));
-    }
+
 
 }

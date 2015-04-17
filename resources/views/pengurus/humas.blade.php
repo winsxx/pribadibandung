@@ -21,7 +21,7 @@
                     @endif
                     <td>{{$c->id}}</td>
                     <td>{{$c->name}}</td>
-                    <td><a href="/detailsiswa/{{$c->id}}">Lihat</a></td>
+                    <td><a href="/detailsiswa/{{$c->id}}" target="_blank">Lihat</a></td>
                     <td><a href="/luluskan/{{$c->id}}">Luluskan</a></td>
                     <td><a href="/gagalkan/{{$c->id}}">Gagalkan</a></td>
                 </tr>

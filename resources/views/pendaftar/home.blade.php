@@ -15,7 +15,11 @@
 
         <div class="row">
             <div class="col-md-4">
-                <img src="images/team-1.jpg" alt="Smiley face" height="240" width="180">
+                @if($dataSiswa->link_profpic == null)
+                    <img src="images/team-1.jpg" alt="Profpic" height="240" width="180">
+                @else
+                    <img src="file/{{$dataSiswa->link_profpic}}" alt="Profpic" height="240" width="180">
+                @endif
             </div>
             <div class="col-md-4">
                 <h3 class="orange-text">No Registrasi:</h3>
