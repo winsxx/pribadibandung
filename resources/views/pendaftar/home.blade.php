@@ -5,7 +5,9 @@
         <div class="container">
             <ul class="top-nav">
                 <li><a href="/home" class="active">Home</a></li>
-                <li><a href="/ubahdatadiri">Ubah Data Diri</a></li>
+                @if($dataSiswa->phase > 1)
+                    <li><a href="/ubahdatadiri">Ubah Data Diri</a></li>
+                @endif
             </ul>
             <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
         </div>
