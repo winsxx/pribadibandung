@@ -2,7 +2,7 @@
 
 @section('content')
 
-@if ($errors->any())
+    @if ($errors->any())
         <ul class="alert alert-danger">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -16,11 +16,12 @@
                 <li><a href="/home">Home</a></li>
                 <li><a href="/ubahdatadiri" class="active">Ubah Data Diri</a></li>
             </ul>
-            <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+            <a href="#" id="pull"><img src="images/menu-icon.png" title="menu"/></a>
         </div>
     </nav>
-    <form class="form-horizontal" action="/gantidata" method="POST">
+    <form class="form-horizontal" action="/gantidata" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
         <div class="col-sm-offset-2 col-sm-8">
             <h1 class="text-center add-margin-top-bottom">Data Diri</h1>
         </div>
@@ -72,7 +73,7 @@
                 <div class="col-sm-6">
                     <div class="radio" id="gender">
                         <label>
-                            <input type="radio" name="gender" id="genderRadios1" value="0" >
+                            <input type="radio" name="gender" id="genderRadios1" value="0">
                             Laki-laki
                         </label>
                     </div>
@@ -88,14 +89,26 @@
 
         <div class="form-group">
             <label for="phoneNumber" class="col-sm-3 control-label">Nomor HP</label>
+
             <div class="col-sm-6">
                 <input class="form-control" name="phoneNumber" id="phoneNumber" value={{ $dataSiswa->no_hp }}>
             </div>
         </div>
         <div class="form-group">
             <label for="phoneNumber" class="col-sm-3 control-label">Asal Sekolah</label>
+
             <div class="col-sm-6">
-                <input class="form-control" name="school_before" id="school_before" value='{{ $dataSiswa->asal_sekolah }}'>
+                <input class="form-control" name="school_before" id="school_before"
+                       value='{{ $dataSiswa->asal_sekolah }}'>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="profpic" class="col-sm-3 control-label">Pas Foto</label>
+
+            <div class="col-sm-6">
+                <input type="file" class="form-control" id="profpic" name="profpic">
+
+                <p class="help-block">Format file: .jpg</p>
             </div>
         </div>
         <div class="form-group">

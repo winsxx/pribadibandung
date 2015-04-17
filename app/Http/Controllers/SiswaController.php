@@ -3,6 +3,7 @@
 use App\CalonSiswa;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DataDiriRequest;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -16,13 +17,18 @@ class SiswaController extends Controller {
     }
 
     public function getHome(){
-    	$dataSiswa=CalonSiswa::findOrNew(Auth::user()->id);  
+    	$dataSiswa=CalonSiswa::findOrNew(Auth::user()->id);
         return view('pendaftar.home',compact('dataSiswa'));
         //return view('pendaftar.home');
     }
 
     public function ubah(){    	
     	$dataSiswa=CalonSiswa::find(Auth::user()->id);
+
+        if($dataSiswa == null){
+            return Redirect::to('/home');
+        }
+
     	if ($dataSiswa == null){
             $dataSiswa = new CalonSiswa();
             $dataSiswa->id = Auth::user()->id;
@@ -36,12 +42,25 @@ class SiswaController extends Controller {
 		$input=$request->all();
 		
 		$calonsiswa = CalonSiswa::find(Auth::user()->id);
-		$calonsiswa->alamat=$input['address'];
+
+        if($calonsiswa == null){
+            Redirect::to('/home');
+        }
+        $calonsiswa->alamat=$input['address'];
 		$calonsiswa->tmpt_lahir=$input['placeofbirth'];
 		$calonsiswa->tgl_lahir=$input['dateofbirth'];
 		$calonsiswa->gender=$input['gender'];
 		$calonsiswa->no_hp=$input['phoneNumber'];
 		$calonsiswa->asal_sekolah=$input['school_before'];
+
+        if($request->hasFile('profpic')){
+            $dokumen = $request->file('profpic');
+            if($dokumen->isValid() && $dokumen->getClientOriginalExtension()=='jpg'){
+                $filename = 'profpic_'.Auth::user()->id.'.jpg';
+                $calonsiswa->link_profpic = $filename;
+                $dokumen->move('file', $filename);
+            }
+        }
 
 		$calonsiswa->save();			
 
@@ -51,7 +70,7 @@ class SiswaController extends Controller {
     public function store(DataDiriRequest $request){
 		$input=$request->all();
 
-		$calonsiswa=new CalonSiswa();
+		$calonsiswa=CalonSiswa::findOrNew(Auth::user()->id);
 		$calonsiswa->id = Auth::user()->id;
 		$calonsiswa->alamat=$input['address'];
 		$calonsiswa->tmpt_lahir=$input['placeofbirth'];
@@ -92,9 +111,6 @@ class SiswaController extends Controller {
         return Redirect::to('home');
     }
 
-    public function showDetail($id){
-    	$dataSiswa = CalonSiswa::find($id);
-    	return view('pendaftar.detilsiswa',compact('dataSiswa'));
-    }
+
 
 }

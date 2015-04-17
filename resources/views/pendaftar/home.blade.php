@@ -5,7 +5,9 @@
         <div class="container">
             <ul class="top-nav">
                 <li><a href="/home" class="active">Home</a></li>
-                <li><a href="/ubahdatadiri">Ubah Data Diri</a></li>
+                @if($dataSiswa->phase > 1)
+                    <li><a href="/ubahdatadiri">Ubah Data Diri</a></li>
+                @endif
             </ul>
             <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
         </div>
@@ -15,7 +17,11 @@
 
         <div class="row">
             <div class="col-md-4">
-                <img src="images/team-1.jpg" alt="Smiley face" height="240" width="180">
+                @if($dataSiswa->link_profpic == null)
+                    <img src="images/team-1.jpg" alt="Profpic" height="240" width="180">
+                @else
+                    <img src="file/{{$dataSiswa->link_profpic}}" alt="Profpic" height="240" width="180">
+                @endif
             </div>
             <div class="col-md-4">
                 <h3 class="orange-text">No Registrasi:</h3>

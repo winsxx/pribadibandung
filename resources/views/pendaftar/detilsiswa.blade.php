@@ -2,31 +2,56 @@
 
 @section('content')
 
-@if ($errors->any())
+    @if ($errors->any())
         <ul class="alert alert-danger">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
     @endif
-@endsection
 
-    <nav class="navbar navbar-default top-nav">
-        <div class="container">
-            <ul class="top-nav">
-                <li><a href="/home">Home</a></li>
-                <li><a href="/ubahdatadiri" class="active">Detail Siswa</a></li>
-            </ul>
-            <a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
-        </div>
-    </nav>
-    <table class="table table-bordered">
-        <tr class="table-header">
-            <th>Attribute</th>
-            <th>Keterangan</th>
-        </tr>        
-        <tr>                    
-            <td>Nama</td>
-            <td>{{ $dataSiswa->name }}</td>
-        </tr>        
-    </table>
+    <div class="container add-margin-top-bottom">
+        <table class="table table-bordered">
+            <tr class="table-header">
+                <th>Attribute</th>
+                <th>Keterangan</th>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td>{{ $pengguna->name }}</td>
+            </tr>
+            <tr>
+                <td>Asal Sekolah</td>
+                <td>{{ $dataSiswa->asal_sekolah }}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{ $pengguna->email }}</td>
+            </tr>
+            <tr>
+                <td>No HP</td>
+                <td>{{ $dataSiswa->no_hp }}</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>{{ $dataSiswa->alamat }}</td>
+            </tr>
+            <tr>
+                <td>Tempat Lahir</td>
+                <td>{{ $dataSiswa->tmpt_lahir }}</td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>{{ $dataSiswa->tgl_lahir }}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                @if($dataSiswa->gender == 0)
+                    <td>Laki-laki</td>
+                @else
+                    <td>Perempuan</td>
+                @endif
+            </tr>
+        </table>
+    </div>
+@endsection
